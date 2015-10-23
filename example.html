@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>API Example</title>
+</head>
+<body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script>
+		$.ajax({
+		  url: 'http://api.hackeryou.com/v1/key',
+		  method:'POST',
+		  data: {
+		    email: 'ryan@ryanchristiani.com'
+		  }
+		}).then(function(res) {
+		   console.log(res);
+		});
+	</script>
+</body>
+</html>

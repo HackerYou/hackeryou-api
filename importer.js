@@ -125,7 +125,7 @@ if(importOption === 'students') {
 				});
 			});
 		}
-	}).on('end',() => process.exit(0));
+	});
 
 }
 
@@ -175,6 +175,6 @@ if(importOption === 'team') {
 				}
 			});
 		}
-	}).on('end',() => process.end(0));
+	});
 }
 
