@@ -8,6 +8,12 @@ let keys = require('./api/models/keys.js');
 
 app.use(bodyParser.json());
 
+app.use((req,res,next) => {
+	res.setHeaders('Access-Control-Allow-Origin', '*');
+	res.header('Access-Control-Allow-Methods', 'POST, GET');
+	next();
+});
+
 function authRoute(req,res,next) {
 	let query = req.query;
 	if(!query.key) {

@@ -62,6 +62,7 @@ Used to scrape the HackerYou website to gather students information
 
 ##TODO
 Get current students
+Add tests
 
 ##Contributing
 Please fork the repo and make pull requests! 
