@@ -6,16 +6,20 @@ let api =  require('./api/index.js');
 let bodyParser = require('body-parser');
 let keys = require('./api/models/keys.js');
 
-app.use(bodyParser.json());
-
 app.use((req,res,next) => {
-	res.setHeaders('Access-Control-Allow-Origin', '*');
-	res.header('Access-Control-Allow-Methods', 'POST, GET');
+	res.header('Access-Control-Allow-Origin', '*');
+	res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+	res.header('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE, OPTIONS');
 	next();
 });
 
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+
 function authRoute(req,res,next) {
 	let query = req.query;
+
 	if(!query.key) {
 		res.status(409).send({
 			error: 'Must pass api key for request'
