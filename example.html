@@ -7,14 +7,26 @@
 <body>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script>
+		// $.ajax({
+		//   url: 'http://api.hackeryou.com/v1/key',
+		//   method:'POST',
+		//   dataType: 'json',
+		//   data: {
+		//     email: 'ryan@ryanchristiani.com'
+		//   }
+		// }).then(function(res) {
+		// 	//Get Key
+		//    console.log(res);
+		// });
 		$.ajax({
-		  url: 'http://api.hackeryou.com/v1/key',
-		  method:'POST',
-		  data: {
-		    email: 'ryan@ryanchristiani.com'
-		  }
+			url: 'http://api.hackeryou.com/v1/students',
+			method: 'GET',
+			dataType: 'json',
+			data: {
+				key: '$2a$10$8oHPy5SPtBH6J.tK3TaTSu1I/Vagpmn29kcNFcQAtC/n1m2DZ1sWq'
+			}
 		}).then(function(res) {
-		   console.log(res);
+			console.log(res);
 		});
 	</script>
 </body>
