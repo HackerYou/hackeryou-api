@@ -17,6 +17,15 @@ Params | Value | Description
 ------ | ---- | ------
 `email` : string | `your-email` | Api key to make requests
 
+
+####`/key`
+<strong>GET</strong> _Return api key based on email provided_
+
+Params | Value | Description
+------ | ---- | ------
+`email` : string | `your-email` | Api key registered to email
+
+
 ###Students
 ###`/students`
 <strong>GET</strong> _Return all students_

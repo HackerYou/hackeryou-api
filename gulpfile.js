@@ -3,6 +3,7 @@
 let gulp = require('gulp');
 let eslint = require('gulp-eslint');
 let mocha = require('gulp-mocha');
+let notify = require('gulp-notify');
 
 gulp.task('lint', () => {
 	gulp.src('./api/**/*.js')
@@ -14,7 +15,10 @@ gulp.task('lint', () => {
 
 gulp.task('tests',() => {
 	gulp.src('./tests/**/*.js')
-		.pipe(mocha({reporter: 'spec'}));
+		.pipe(mocha({reporter: 'spec'}))
+		.on('error', (err) => {
+			notify(err.message);
+		});
 });
 
 gulp.task('default', ['lint','tests'], () => {
