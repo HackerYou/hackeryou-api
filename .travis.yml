@@ -1,0 +1,8 @@
+language: node_js
+node_js: 4.1
+services: mongodb
+script: gulp
+before_script:
+  - npm install -g gulp
+  - node travis-startup.js
+script: gulp tests

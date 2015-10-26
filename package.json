@@ -6,6 +6,10 @@
   "scripts": {
     "test": "gulp tests"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HackerYou/hackeryou-api.git"
+  },
   "author": "Ryan Christiani",
   "license": "ISC",
   "engines": {
