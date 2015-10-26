@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/HackerYou/hackeryou-api.svg)](https://travis-ci.orgHackerYou/hackeryou-api)
 #HackerYou API
 A simple API for the HackerYou community. It contains all the alumni, instructors and operations staff information.
 
