@@ -8,6 +8,9 @@
   },
   "author": "Ryan Christiani",
   "license": "ISC",
+  "engines" : {
+    "node" : ">=4.0"
+  },
   "dependencies": {
     "bcrypt": "^0.8.5",
     "body-parser": "^1.14.1",
