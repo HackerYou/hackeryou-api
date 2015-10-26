@@ -4,7 +4,7 @@
   "description": "An api with currents students, alumni and instructors that allows students to play around and learn AJAX!",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "gulp tests"
   },
   "author": "Ryan Christiani",
   "license": "ISC",
@@ -13,8 +13,14 @@
     "body-parser": "^1.14.1",
     "cheerio": "^0.19.0",
     "express": "^4.13.3",
+    "gulp": "^3.9.0",
     "mongoose": "^4.1.11",
     "phantomjs": "^1.9.18",
     "request": "^2.65.0"
+  },
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "gulp-eslint": "^1.0.0",
+    "gulp-mocha": "^2.1.3"
   }
 }
