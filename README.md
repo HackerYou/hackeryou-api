@@ -61,9 +61,12 @@ Params | Value | Description
 Used to scrape the HackerYou website to gather students information
 
 ##TODO
-Get current students
-Add tests
+Get current students/not just alumni
 
 ##Contributing
 Please fork the repo and make pull requests! 
+To get started run `npm install`, start an instance of mongoDB. In order to get the initial data you will have to run `node importer.js` with either `team` or `students` as an argument.
+
+	node importer.js team
+
 
