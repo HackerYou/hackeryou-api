@@ -5,3 +5,9 @@ before_script:
   - npm install -g gulp
   - node travis-startup.js
 script: gulp tests
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - gcc-4.8
