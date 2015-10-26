@@ -42,7 +42,8 @@ app.get('/', (req,res) => {
 });
 
 //Keys
-app.all('/v1/key', api.keys.getKey);
+app.post('/v1/key', api.keys.createKey);
+app.get('/v1/key', api.keys.getKey)
 
 //Students
 app.get('/v1/students', authRoute, api.students.getStudents);
