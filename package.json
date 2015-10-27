@@ -22,7 +22,6 @@
     "express": "^4.13.3",
     "gulp": "^3.9.0",
     "mongoose": "^4.1.11",
-    "phantomjs": "^1.9.18",
     "request": "^2.65.0"
   },
   "devDependencies": {

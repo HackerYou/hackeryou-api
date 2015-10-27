@@ -1,8 +1,16 @@
 language: node_js
-node_js: 4.1
+node_js: 4.2
 services: mongodb
-script: gulp
 before_script:
   - npm install -g gulp
   - node travis-startup.js
 script: gulp tests
+env:
+  - CXX=g++-4.8
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - gcc-4.8
+    - g++-4.8
