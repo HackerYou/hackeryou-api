@@ -1,5 +1,4 @@
-[![Build Status](https://travis-ci.org/HackerYou/hackeryou-api.svg)](https://travis-ci.orgHackerYou/hackeryou-api)
-#HackerYou API
+#HackerYou API [![Build Status](https://travis-ci.org/HackerYou/hackeryou-api.svg)](https://travis-ci.org/HackerYou/hackeryou-api)
 A simple API for the HackerYou community. It contains all the alumni, instructors and operations staff information.
 
 #Why?
@@ -72,6 +71,7 @@ Used to scrape the HackerYou website to gather students information
 
 ##TODO
 Get current students/not just alumni
+Add deploy step after Travis CI pass. Either with a simple bash script or [shipit](https://github.com/shipitjs/shipit) file.
 
 ##Contributing
 Please fork the repo and make pull requests! 
