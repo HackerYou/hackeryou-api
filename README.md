@@ -9,21 +9,17 @@ In order to make requests to the HackerYou API you need to first obtain an API k
 
 ##Routes
 
+All requests need to be prefixed with `http://api.hackeryou.com/v1/`. 
+
 ###Key
 ####`/key`
-<strong>POST</strong> _Return api key for use_
+**POST** or **GET** _Return or register an api key for use based on email provided_
 
 Params | Value | Description
 ------ | ---- | ------
 `email` : string | `your-email` | Api key to make requests
 
-
-####`/key`
-<strong>GET</strong> _Return api key based on email provided_
-
-Params | Value | Description
------- | ---- | ------
-`email` : string | `your-email` | Api key registered to email
+**Examples:** `http://api.hackeryou.com/v1/key?email=snickers@example.com` 
 
 
 ###Students
