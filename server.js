@@ -42,7 +42,7 @@ app.get('/', (req,res) => {
 });
 
 //Keys
-app.post('/v1/key', api.keys.createKey);
+app.post('/v1/key', api.keys.getKey);
 app.get('/v1/key', api.keys.getKey)
 
 //Students

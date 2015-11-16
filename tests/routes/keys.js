@@ -16,7 +16,8 @@ describe('Keys API', () => {
 		mongoose.disconnect();
 	});
 	it('should create a key', (done) => {
-		keys.createKey({
+		keys.getKey({
+			query: {},
 			body:{
 				email: 'test@test.com'
 			}
@@ -28,7 +29,8 @@ describe('Keys API', () => {
 		});
 	});
 	it('should let user know that a key exists', (done) => {
-		keys.createKey({
+		keys.getKey({
+			query: {},
 			body:{
 				email: 'test@test.com'
 			}
@@ -44,10 +46,11 @@ describe('Keys API', () => {
 		keys.getKey({
 			query: {
 				email: 'test@test.com'
-			}
+			},
+			body:{}
 		}, {
 			send(data) {
-				expect(data.email).to.be.eql('test@test.com');
+				expect(data.response.email).to.be.eql('test@test.com');
 				done();
 			}
 		})
