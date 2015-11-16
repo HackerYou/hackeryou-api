@@ -21,6 +21,28 @@ Params | Value | Description
 
 **Examples:** `http://api.hackeryou.com/v1/key?email=snickers@example.com` 
 
+####Sample Response 
+
+*New Key*
+
+	{
+	  "response": {
+	    "key": "$2a$10$ifelhq/xoaa3t0TTWsrz2eXx.6VyV26z92zuN.e68SosdHwnuyF/q",
+	    "email": "tes@tes.com",
+	  }
+	}
+	
+*Key Exists*
+
+	{
+	  "response": {
+	    "key": "$2a$10$ifelhq/xoaa3t0TTWsrz2eXx.6VyV26z92zuN.e68SosdHwnuyF/q",
+	    "email": "tes@tes.com"
+	  },
+	  "message": "Key for email already exists"
+	}
+
+
 
 ###Students
 ###`/students`
@@ -31,6 +53,33 @@ Params | Value | Description
 `key` : string | `your-api-key` |  Api key to make requests
 `order` : string | `desc`<br>`asc` | Used to sort the order of students based on name
 
+####Sample Response 
+
+	{
+	  "students": [
+	    {
+	      "_id": "562e98353f0007bf9713d9d0",
+	      "name": "Adam Kendal",
+	      "photo": "http://hackeryou.com/wp-content/uploads/2015/07/AdamKendal-230x230.jpg",
+	      "location": "Toronto, Ontario",
+	      "cohort": {
+	        "year": 2015,
+	        "season": "Summer"
+	      },
+	      "social": {
+	        "website": "http://adamkendal.ca",
+	        "github": "http://github.com/abkendal",
+	        "twitter": "http://twitter.com/abkendal"
+	      },
+	      "job": {
+	        "position": "Jr. Front-End Developer (contract) ",
+	        "location": "Nurun"
+	      }
+	    }
+	  ],
+	  "count": 1
+	}
+
 ###`/students/:cohort/:year`
 <strong>GET</strong> _Return all students by cohort and year_
 
@@ -38,6 +87,11 @@ Params | Value | Description
 ------ | ------ | ------
 `key` : string | `your-api-key` |  Api key to make requests
 `order` : string | `desc`<br>`asc` | Used to sort the order of students based on name
+
+**Examples:** `http://api.hackeryou.com/v1/summer/2015?key=yourkey`
+
+####Sample Response 
+	Same as the above
 
 ###Operations
 ###`/operations`
@@ -47,6 +101,25 @@ Params | Value | Description
 ------ | ------ | ------
 `key` : string | `your-api-key` | Api key to make requests
 `order` : string | `desc`<br>`asc` | Used to sort the order of students based on name
+
+####Sample Response 
+
+	{
+	  "operations": [
+	    {
+	      "_id": "562e98353f0007bf9713d9d1",
+	      "name": "Heather Payne",
+	      "role": "CEO",
+	      "photo": "http://hackeryou.com/wp-content/uploads/2014/11/team-heatherpayne-@2x1-530x462.jpg",
+	      "social": {
+	        "twitter": "http://twitter.com/heatherpayne",
+	        "website": "http://heatherpayne.ca",
+	        "email": "heather@hackeryou.com"
+	      }
+	    }
+	  ],
+	  "count": 1
+	}
 
 
 ###Instructors
@@ -58,7 +131,23 @@ Params | Value | Description
 `key` : string | `your-api-key` | Api key to make requests
 `order` : string | `desc`<br>`asc` | Used to sort the order of students based on name
 
+####Sample Response 
 
+	{
+	  "instructors": [
+	    {
+	      "_id": "562e98353f0007bf9713d9cf",
+	      "name": "Anne Thomas",
+	      "role": "Lead Instructor, Web Development",
+	      "photo": "http://hackeryou.com/wp-content/uploads/2014/12/Anne-530x462.jpg",
+	      "social": {
+	        "twitter": "http://twitter.com/AlfalfaAnne",
+	        "github": "http://github.com/AlfalfaAnne"
+	      }
+	    }
+	  ],
+	  "count": 1
+	}
 
 
 ##Importer

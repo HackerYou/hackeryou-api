@@ -22,6 +22,7 @@
     "express": "^4.13.3",
     "gulp": "^3.9.0",
     "mongoose": "^4.1.11",
+    "ms": "^0.7.1",
     "request": "^2.65.0"
   },
   "devDependencies": {
