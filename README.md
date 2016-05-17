@@ -88,7 +88,7 @@ Params | Value | Description
 `key` : string | `your-api-key` |  Api key to make requests
 `order` : string | `desc`<br>`asc` | Used to sort the order of students based on name
 
-**Examples:** `http://api.hackeryou.com/v1/summer/2015?key=yourkey`
+**Examples:** `http://api.hackeryou.com/v1/students/summer/2015?key=yourkey`
 
 ####Sample Response 
 	Same as the above
