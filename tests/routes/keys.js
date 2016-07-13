@@ -15,6 +15,18 @@ describe('Keys API', () => {
 		});
 		mongoose.disconnect();
 	});
+	it('should return an error if no email is present', (done) => {
+		keys.getKey({
+			query: {},
+			body: {}
+		},{
+			send(data) {
+				expect(data).to.be.an('object');
+				expect(data.error).to.be.eql('Missing email parameter.');
+				done();
+			}
+		});
+	});
 	it('should create a key', (done) => {
 		keys.getKey({
 			query: {},
