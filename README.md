@@ -1,18 +1,18 @@
-#HackerYou API [![Build Status](https://travis-ci.org/HackerYou/hackeryou-api.svg)](https://travis-ci.org/HackerYou/hackeryou-api)
+# HackerYou API [![Build Status](https://travis-ci.org/HackerYou/hackeryou-api.svg)](https://travis-ci.org/HackerYou/hackeryou-api)
 A simple API for the HackerYou community. It contains all the alumni, instructors and operations staff information.
 
-#Why?
+# Why?
 Mostly this is for learning purposes. Allowing students to practice AJAX using the data, and ultimately allowing students the ability to contribute to the API. For example the API key process is not the most robust, but it allows students a way to practice passing data to an API.
 
-###Authorization 
+### Authorization 
 In order to make requests to the HackerYou API you need to first obtain an API key. Getting a key is easy, you need to make a POST request to `/key` and provide your email address, you will then be returned an `key` that you can use for your requests!
 
-##Routes
+## Routes
 
 All requests need to be prefixed with `http://api.hackeryou.com/v1/`. 
 
-###Key
-####`/key`
+### Key
+#### `/key`
 **POST** or **GET** _Return or register an api key for use based on email provided_
 
 Params | Value | Description
@@ -21,7 +21,7 @@ Params | Value | Description
 
 **Examples:** `http://api.hackeryou.com/v1/key?email=snickers@example.com` 
 
-####Sample Response 
+#### Sample Response 
 
 *New Key*
 
@@ -44,8 +44,8 @@ Params | Value | Description
 
 
 
-###Students
-###`/students`
+### Students
+### `/students`
 <strong>GET</strong> _Return all students_
 
 Params | Value | Description
@@ -80,7 +80,7 @@ Params | Value | Description
 	  "count": 1
 	}
 
-###`/students/:cohort/:year`
+### `/students/:cohort/:year`
 <strong>GET</strong> _Return all students by cohort and year_
 
 Params | Value | Description
@@ -90,11 +90,11 @@ Params | Value | Description
 
 **Examples:** `http://api.hackeryou.com/v1/students/summer/2015?key=yourkey`
 
-####Sample Response 
+#### Sample Response 
 	Same as the above
 
-###Operations
-###`/operations`
+### Operations
+### `/operations`
 <strong>GET</strong> _Return all operations staff_
 
 Params | Value | Description
@@ -102,7 +102,7 @@ Params | Value | Description
 `key` : string | `your-api-key` | Api key to make requests
 `order` : string | `desc`<br>`asc` | Used to sort the order of students based on name
 
-####Sample Response 
+#### Sample Response 
 
 	{
 	  "operations": [
@@ -122,8 +122,8 @@ Params | Value | Description
 	}
 
 
-###Instructors
-###`/instructors`
+### Instructors
+### `/instructors`
 <strong>GET</strong> _Return all instructors_
 
 Params | Value | Description
@@ -131,7 +131,7 @@ Params | Value | Description
 `key` : string | `your-api-key` | Api key to make requests
 `order` : string | `desc`<br>`asc` | Used to sort the order of students based on name
 
-####Sample Response 
+#### Sample Response 
 
 	{
 	  "instructors": [
@@ -150,15 +150,15 @@ Params | Value | Description
 	}
 
 
-##Importer
+## Importer
 
 Used to scrape the HackerYou website to gather students information
 
-##TODO
+## TODO
 Get current students/not just alumni
 Add deploy step after Travis CI pass. Either with a simple bash script or [shipit](https://github.com/shipitjs/shipit) file.
 
-##Contributing
+## Contributing
 Please fork the repo and make pull requests! 
 To get started run `npm install`, start an instance of mongoDB. In order to get the initial data you will have to run `node importer.js` with either `team` or `students` as an argument.
 
